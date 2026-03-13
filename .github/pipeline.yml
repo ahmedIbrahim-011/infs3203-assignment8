@@ -25,11 +25,11 @@ jobs:
 
       - name: Tag image
         if: github.event_name == 'push'
-        run: docker tag quiz-app idhdocker/quiz-app:latest
+        run: docker tag quiz-app iuviu/quiz-app:latest
 
       - name: Push image
         if: github.event_name == 'push'
-        run: docker push idhdocker/quiz-app:latest
+        run: docker push iuviu/quiz-app:latest
 
   deploy:
     needs: build-test-push
